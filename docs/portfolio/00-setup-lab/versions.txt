@@ -1,0 +1,7 @@
+OS: Ubuntu 25.10
+Docker: Docker version 28.5.2, build ecc6942
+Docker Compose: Docker Compose version v2.40.3
+kubectl: 
+Minikube: minikube version: v1.37.0
+commit: 65318f4cfff9c12cc87ec9eb8f4cdd57b25047f3
+Helm: v3.19.0+g3d8990f

@@ -1,0 +1,2 @@
+NAMES      IMAGE                                 STATUS              PORTS
+minikube   gcr.io/k8s-minikube/kicbase:v0.0.48   Up About a minute   127.0.0.1:32768->22/tcp, 127.0.0.1:32769->2376/tcp, 127.0.0.1:32770->5000/tcp, 127.0.0.1:32771->8443/tcp, 127.0.0.1:32772->32443/tcp
