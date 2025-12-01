@@ -1,7 +1,7 @@
 # Infra: Setup local SRE Lab (Docker + Minikube + Helm)
 
 **Descrição:**  
-Instalei Docker 24.x, Minikube 1.x e Helm 3.x em ambiente Ubuntu 24.04 LTS.  
+Instalei Docker 29.1.1, Minikube 1.x e Helm 3.x em ambiente Ubuntu 25.10.  
 Motivo: simular produção local com um control plane Kubernetes real e ferramentas de empacotamento e observabilidade.  
 Este setup serve como base para práticas SRE (deploy, observabilidade, confiabilidade e automação).
 
