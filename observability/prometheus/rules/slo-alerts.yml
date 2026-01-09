@@ -1,0 +1,36 @@
+groups:
+- name: slo-burn-rate-alerts
+  rules:
+
+  - alert: CheckoutFastBurn
+    expr: |
+      (
+        1 - (
+          sum(rate(http_requests_total{job="orders",status=~"2.."}[5m]))
+          /
+          sum(rate(http_requests_total{job="orders"}[5m]))
+        )
+      ) > 0.07
+    for: 5m
+    labels:
+      severity: critical
+    annotations:
+      summary: "High error budget burn rate on checkout"
+      description: "Checkout service is consuming error budget too fast (fast burn). Immediate action required."
+
+  - alert: CheckoutSlowBurn
+    expr: |
+      (
+        1 - (
+          sum(rate(http_requests_total{job="orders",status=~"2.."}[1h]))
+          /
+          sum(rate(http_requests_total{job="orders"}[1h]))
+        )
+      ) > 0.01
+    for: 1h
+    labels:
+      severity: warning
+    annotations:
+      summary: "Sustained error budget burn on checkout"
+      description: "Checkout service is slowly consuming error budget. Investigation recommended."
+
