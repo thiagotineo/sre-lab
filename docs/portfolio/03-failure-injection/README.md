@@ -31,3 +31,27 @@ Antes da injeção de falha, todos os serviços estavam operacionais.
 ```bash
 docker compose ps
 
+---
+
+## Experimento 2 — Falha no RabbitMQ (Mensageria)
+
+### Justificativa
+
+RabbitMQ é responsável pela comunicação assíncrona entre serviços.
+Falhas nesse componente tendem a gerar efeitos em cascata,
+afetando serviços dependentes sem derrubar imediatamente o front-end.
+
+Este experimento avalia:
+- Tolerância a falhas assíncronas
+- Degradação progressiva do sistema
+- Capacidade de observação via métricas
+
+---
+
+### Estado inicial (Baseline)
+
+Antes da falha:
+
+```bash
+docker compose ps
+
